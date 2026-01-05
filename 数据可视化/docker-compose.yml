@@ -1,0 +1,212 @@
+version: '3.8'
+
+services:
+  # MySQL数据库
+  mysql:
+    image: mysql:8.0
+    container_name: data-visualization-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: data_visualization
+      MYSQL_USER: dv_user
+      MYSQL_PASSWORD: dv_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # Redis缓存
+  redis:
+    image: redis:6.2-alpine
+    container_name: data-visualization-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # Java后端服务
+  java-backend:
+    build:
+      context: ./java-backend
+      dockerfile: Dockerfile
+    container_name: data-visualization-java
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/data_visualization
+      SPRING_DATASOURCE_USERNAME: dv_user
+      SPRING_DATASOURCE_PASSWORD: dv_password
+      SPRING_REDIS_HOST: redis
+      SPRING_REDIS_PORT: 6379
+      PYTHON_API_BASE_URL: http://python-analysis:5000
+    depends_on:
+      - mysql
+      - redis
+    volumes:
+      - uploads_data:/app/uploads
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # Python分析服务
+  python-analysis:
+    build:
+      context: ./python-analysis
+      dockerfile: Dockerfile
+    container_name: data-visualization-python
+    ports:
+      - "5000:5000"
+    environment:
+      DASHSCOPE_API_KEY: sk-d1f0eab96c7d456cbe8311c82f10dffa
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      JAVA_BACKEND_URL: http://java-backend:8080
+    depends_on:
+      - redis
+    volumes:
+      - python_logs:/app/logs
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # C优化模块服务
+  c-optimization:
+    build:
+      context: ./c-optimization
+      dockerfile: Dockerfile
+    container_name: data-visualization-c
+    ports:
+      - "8081:8081"
+    volumes:
+      - c_logs:/app/logs
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # API网关
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: data-visualization-gateway
+    ports:
+      - "8000:8000"
+    environment:
+      JAVA_BACKEND_URL: http://java-backend:8080
+      PYTHON_ANALYSIS_URL: http://python-analysis:5000
+      C_OPTIMIZATION_URL: http://c-optimization:8081
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+      - java-backend
+      - python-analysis
+      - c-optimization
+      - redis
+    volumes:
+      - gateway_logs:/app/logs
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # 前端服务
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: data-visualization-frontend
+    ports:
+      - "3000:80"
+    environment:
+      API_BASE_URL: http://localhost:8000
+    depends_on:
+      - api-gateway
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # Nginx反向代理 (可选)
+  nginx:
+    image: nginx:alpine
+    container_name: data-visualization-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - frontend
+      - api-gateway
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # Prometheus监控
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: data-visualization-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+  # Grafana可视化
+  grafana:
+    image: grafana/grafana:latest
+    container_name: data-visualization-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./docker/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./docker/grafana/datasources:/etc/grafana/provisioning/datasources
+    depends_on:
+      - prometheus
+    networks:
+      - data-visualization-network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+    driver: local
+  redis_data:
+    driver: local
+  uploads_data:
+    driver: local
+  python_logs:
+    driver: local
+  c_logs:
+    driver: local
+  gateway_logs:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+networks:
+  data-visualization-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

@@ -1,0 +1,292 @@
+2025-09-29 21:16:36 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:20:35 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:24:10 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250929_212410_511
+2025-09-29 21:25:02 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:26:12 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250929_212612_900
+2025-09-29 21:26:22 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:26:46 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250929_212646_1536
+2025-09-29 21:28:10 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:28:40 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250929_212840_5916
+2025-09-29 21:28:56 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:30:28 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:31:36 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:31:45 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:31:46 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:31:56 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:31:59 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:32:01 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:33:29 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:33:31 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: None
+2025-09-29 21:37:46 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:38:01 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_212410_511
+2025-09-29 21:38:11 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: test
+2025-09-29 21:38:23 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_212410_511
+2025-09-29 21:38:26 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_212840_5916
+2025-09-29 21:38:26 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_212840_5916
+2025-09-29 21:38:54 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:39:06 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250929_213906_6555
+2025-09-29 21:39:18 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:39:36 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:39:47 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:40:03 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:41:15 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_212840_5916
+2025-09-29 21:41:15 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_212840_5916
+2025-09-29 21:42:34 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_212840_5916
+2025-09-29 21:42:34 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_212840_5916
+2025-09-29 21:43:34 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:44:02 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:44:24 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:44:43 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:45:01 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:45:22 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_212840_5916
+2025-09-29 21:45:22 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_212840_5916
+2025-09-29 21:46:18 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:46:34 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:46:52 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:54:03 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:54:14 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:54:35 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:56:17 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:56:17 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:58:12 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 21:58:26 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 21:58:26 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 21:59:55 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 22:00:08 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:00:08 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:02:08 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:02:08 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:02:16 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:02:16 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:02:28 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:02:28 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:10:21 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 22:10:57 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:10:57 | ERROR    | logging:callHandlers:1706 - 数据分析失败: 'AnalyzeData' object has no attribute '_descriptive_analysis'
+2025-09-29 22:10:58 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:10:58 | ERROR    | logging:callHandlers:1706 - 数据分析失败: 'AnalyzeData' object has no attribute '_descriptive_analysis'
+2025-09-29 22:11:11 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:11:11 | ERROR    | logging:callHandlers:1706 - 数据分析失败: 'AnalyzeData' object has no attribute '_trend_analysis'
+2025-09-29 22:11:13 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:11:13 | ERROR    | logging:callHandlers:1706 - 数据分析失败: 'AnalyzeData' object has no attribute '_correlation_analysis'
+2025-09-29 22:11:14 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:11:14 | ERROR    | logging:callHandlers:1706 - 数据分析失败: 'AnalyzeData' object has no attribute '_trend_analysis'
+2025-09-29 22:11:15 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:11:15 | ERROR    | logging:callHandlers:1706 - 数据分析失败: 'AnalyzeData' object has no attribute '_trend_analysis'
+2025-09-29 22:34:33 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 22:35:48 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 22:35:55 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:35:58 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:36:03 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:36:07 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:36:15 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:36:15 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:36:15 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:06 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:40:06 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:40:06 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:12 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:40:12 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:40:12 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:18 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:40:18 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:40:18 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:22 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:40:22 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:40:22 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:26 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:40:26 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:40:26 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:29 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:40:29 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:40:29 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:40:34 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:00 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:05 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:08 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:10 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:12 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:14 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:16 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:18 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:20 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:22 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:23 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:24 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:24 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:27 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:29 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:31 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:41:34 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:48:31 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 22:48:45 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:48:50 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:48:50 | ERROR    | logging:callHandlers:1706 - 生成图表失败: 'VisualizeData' object has no attribute '_generate_pca_chart'
+2025-09-29 22:49:29 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 22:49:39 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:13 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 22:52:13 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 22:52:13 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 22:52:16 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:22 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:23 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:30 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:31 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:33 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:36 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:39 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:41 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:44 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:52:48 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:45 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:47 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:49 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:53 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:56 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:58 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:54:59 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:55:00 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:55:02 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:55:05 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 22:55:05 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:01:46 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:02:03 | ERROR    | logging:callHandlers:1706 - 数据预处理失败: 'DataPreprocessingAPI' object has no attribute 'load_data'
+2025-09-29 23:03:08 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:03:34 | ERROR    | logging:callHandlers:1706 - 数据预处理失败: 'outlier_handling'
+2025-09-29 23:03:52 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:04:14 | WARNING  | logging:callHandlers:1706 - TensorFlow未安装，无法创建ANN模型
+2025-09-29 23:05:44 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:05:45 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:05:45 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:05:52 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:05:52 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:05:52 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:06:02 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:09 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:11 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:12 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:14 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:14 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:16 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:18 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:21 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:24 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:36 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:38 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:39 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:41 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:42 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:44 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:06:44 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:26 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:30 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:40 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:42 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:52 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:54 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:07:56 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:08:57 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:09:52 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:22 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:23 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:24 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:25 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:25 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:25 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:25 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:47 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:10:55 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:11:11 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:11:17 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:11:45 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:12:33 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:12:38 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:12:44 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:13:14 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:13:24 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:13:30 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:11 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:15:12 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:15:12 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:15:15 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:15:15 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:15:15 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:15:22 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:15:22 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:15:22 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:15:24 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:15:25 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:15:25 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:15:28 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:15:28 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:15:28 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:15:30 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:15:30 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:15:30 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:15:37 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:39 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:46 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:48 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:51 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:53 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:55 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:57 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:15:59 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:16:01 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:16:01 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:16:03 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:20:03 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:20:47 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:20:56 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:21:02 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:21:37 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_213906_6555
+2025-09-29 23:21:37 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:21:37 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_213906_6555
+2025-09-29 23:21:44 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:21:48 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:21:50 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:04 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:08 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:10 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:14 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:17 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:18 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:23 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:27 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:31 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:34 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:22:38 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:24:41 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250929_232441_1415
+2025-09-29 23:24:49 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_232441_1415
+2025-09-29 23:24:49 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:24:49 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_232441_1415
+2025-09-29 23:24:51 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_232441_1415
+2025-09-29 23:24:51 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:24:51 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_232441_1415
+2025-09-29 23:24:53 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_232441_1415
+2025-09-29 23:24:53 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:24:53 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_232441_1415
+2025-09-29 23:24:55 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_232441_1415
+2025-09-29 23:24:55 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:24:55 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_232441_1415
+2025-09-29 23:24:56 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_232441_1415
+2025-09-29 23:24:56 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:24:56 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_232441_1415
+2025-09-29 23:24:58 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250929_232441_1415
+2025-09-29 23:24:58 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-29 23:24:58 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250929_232441_1415
+2025-09-29 23:25:10 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:25:40 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:25:44 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:25:50 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:25:57 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:00 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:04 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:07 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:11 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:20 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:23 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:26:27 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-29 23:41:28 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:41:35 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-29 23:41:58 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000

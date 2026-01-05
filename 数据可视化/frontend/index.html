@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.26.0/plotly.min.js"></script>
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .main-content {
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .upload-area {
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .upload-area:hover {
+            border-color: #007bff;
+            background-color: #f8f9fa;
+        }
+        .upload-area.dragover {
+            border-color: #007bff;
+            background-color: #e3f2fd;
+        }
+        .analysis-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .insight-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+        .prediction-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+        .loading {
+            display: none;
+        }
+        .loading.show {
+            display: block;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 12px 20px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .sidebar .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chart-line me-2"></i>
+                数据可视化系统
+            </a>
+            <div class="navbar-nav ms-auto">
+                <span class="navbar-text">
+                    <i class="fas fa-user me-1"></i>
+                    管理员
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 侧边栏 -->
+            <div class="col-md-3 col-lg-2 sidebar p-0">
+                <div class="p-3">
+                    <h5 class="text-white mb-4">
+                        <i class="fas fa-tachometer-alt me-2"></i>
+                        控制面板
+                    </h5>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#" onclick="showSection('dashboard')">
+                            <i class="fas fa-home"></i>
+                            仪表板
+                        </a>
+                        <a class="nav-link" href="#" onclick="showSection('upload')">
+                            <i class="fas fa-upload"></i>
+                            数据上传
+                        </a>
+                        <a class="nav-link" href="#" onclick="showSection('analysis')">
+                            <i class="fas fa-chart-bar"></i>
+                            数据分析
+                        </a>
+                        <a class="nav-link" href="#" onclick="showSection('visualization')">
+                            <i class="fas fa-chart-pie"></i>
+                            数据可视化
+                        </a>
+                        <a class="nav-link" href="#" onclick="showSection('predictions')">
+                            <i class="fas fa-crystal-ball"></i>
+                            趋势预测
+                        </a>
+                        <a class="nav-link" href="#" onclick="showSection('settings')">
+                            <i class="fas fa-cog"></i>
+                            系统设置
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- 主内容区 -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <div class="p-4">
+                    <!-- 仪表板 -->
+                    <div id="dashboard-section" class="section">
+                        <h2 class="mb-4">
+                            <i class="fas fa-tachometer-alt me-2"></i>
+                            系统仪表板
+                        </h2>
+                        
+                        <!-- 统计卡片 -->
+                        <div class="row mb-4">
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-database fa-2x text-primary mb-2"></i>
+                                        <h5 class="card-title">数据总量</h5>
+                                        <h3 class="text-primary" id="total-data">0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-chart-line fa-2x text-success mb-2"></i>
+                                        <h5 class="card-title">分析次数</h5>
+                                        <h3 class="text-success" id="analysis-count">0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-eye fa-2x text-info mb-2"></i>
+                                        <h5 class="card-title">可视化图表</h5>
+                                        <h3 class="text-info" id="chart-count">0</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <i class="fas fa-clock fa-2x text-warning mb-2"></i>
+                                        <h5 class="card-title">系统状态</h5>
+                                        <h3 class="text-warning" id="system-status">运行中</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 最近活动 -->
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-chart-area me-2"></i>
+                                            数据趋势
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-container">
+                                            <canvas id="trendChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-list me-2"></i>
+                                            最近活动
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="recent-activities">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-upload text-primary me-2"></i>
+                                                <div>
+                                                    <small class="text-muted">刚刚</small>
+                                                    <div>上传了销售数据</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-chart-bar text-success me-2"></i>
+                                                <div>
+                                                    <small class="text-muted">5分钟前</small>
+                                                    <div>完成了趋势分析</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-eye text-info me-2"></i>
+                                                <div>
+                                                    <small class="text-muted">10分钟前</small>
+                                                    <div>生成了可视化图表</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据上传 -->
+                    <div id="upload-section" class="section" style="display: none;">
+                        <h2 class="mb-4">
+                            <i class="fas fa-upload me-2"></i>
+                            数据上传
+                        </h2>
+                        
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">上传数据文件</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="upload-area" id="upload-area">
+                                            <i class="fas fa-cloud-upload-alt fa-3x text-muted mb-3"></i>
+                                            <h5>拖拽文件到此处或点击选择文件</h5>
+                                            <p class="text-muted">支持 CSV、Excel、JSON 格式，最大 100MB</p>
+                                            <input type="file" id="file-input" class="d-none" accept=".csv,.xlsx,.xls,.json">
+                                            <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">
+                                                <i class="fas fa-folder-open me-2"></i>
+                                                选择文件
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <h6>文件信息</h6>
+                                            <div id="file-info" class="alert alert-info" style="display: none;">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <strong>文件名:</strong> <span id="file-name"></span><br>
+                                                        <strong>大小:</strong> <span id="file-size"></span><br>
+                                                        <strong>类型:</strong> <span id="file-type"></span>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <strong>行数:</strong> <span id="file-rows"></span><br>
+                                                        <strong>列数:</strong> <span id="file-columns"></span><br>
+                                                        <strong>状态:</strong> <span id="file-status" class="badge bg-success">就绪</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <h6>数据描述</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <label for="data-name" class="form-label">数据名称</label>
+                                                    <input type="text" class="form-control" id="data-name" placeholder="请输入数据名称">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="data-category" class="form-label">数据类别</label>
+                                                    <select class="form-select" id="data-category">
+                                                        <option value="sales">销售数据</option>
+                                                        <option value="finance">财务数据</option>
+                                                        <option value="marketing">营销数据</option>
+                                                        <option value="operations">运营数据</option>
+                                                        <option value="other">其他</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="data-description" class="form-label">数据描述</label>
+                                                <textarea class="form-control" id="data-description" rows="3" placeholder="请描述数据的内容和用途"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4 text-end">
+                                            <button class="btn btn-success" id="upload-btn" onclick="uploadData()" disabled>
+                                                <i class="fas fa-upload me-2"></i>
+                                                上传数据
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">数据预览</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="data-preview">
+                                            <p class="text-muted text-center">请先选择数据文件</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card mt-3">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">上传历史</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="upload-history">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span>销售数据_2024.csv</span>
+                                                <small class="text-muted">2小时前</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span>用户行为数据.xlsx</span>
+                                                <small class="text-muted">1天前</small>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>财务报告.json</span>
+                                                <small class="text-muted">3天前</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据分析 -->
+                    <div id="analysis-section" class="section" style="display: none;">
+                        <h2 class="mb-4">
+                            <i class="fas fa-chart-bar me-2"></i>
+                            数据分析
+                        </h2>
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">选择数据</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <label for="analysis-data" class="form-label">数据源</label>
+                                        <select class="form-select" id="analysis-data">
+                                            <option value="">请选择数据</option>
+                                        </select>
+                                        
+                                        <div class="mt-3">
+                                            <label for="analysis-type" class="form-label">分析类型</label>
+                                            <select class="form-select" id="analysis-type">
+                                                <option value="trend_analysis">趋势分析</option>
+                                                <option value="correlation_analysis">相关性分析</option>
+                                                <option value="pattern_recognition">模式识别</option>
+                                                <option value="clustering">聚类分析</option>
+                                                <option value="anomaly_detection">异常检测</option>
+                                                <option value="comprehensive">综合分析</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="enable-prediction">
+                                                <label class="form-check-label" for="enable-prediction">
+                                                    启用趋势预测
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-3" id="prediction-steps" style="display: none;">
+                                            <label for="prediction-steps-input" class="form-label">预测步数</label>
+                                            <input type="number" class="form-control" id="prediction-steps-input" value="10" min="1" max="100">
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <button class="btn btn-primary w-100" onclick="startAnalysis()">
+                                                <i class="fas fa-play me-2"></i>
+                                                开始分析
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-8">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">分析结果</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="analysis-results">
+                                            <div class="text-center text-muted">
+                                                <i class="fas fa-chart-bar fa-3x mb-3"></i>
+                                                <p>请选择数据并开始分析</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="loading text-center" id="analysis-loading">
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">分析中...</span>
+                                            </div>
+                                            <p class="mt-2">正在分析数据，请稍候...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据可视化 -->
+                    <div id="visualization-section" class="section" style="display: none;">
+                        <h2 class="mb-4">
+                            <i class="fas fa-chart-pie me-2"></i>
+                            数据可视化
+                        </h2>
+                        
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">图表设置</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <label for="viz-data" class="form-label">数据源</label>
+                                        <select class="form-select" id="viz-data">
+                                            <option value="">请选择数据</option>
+                                        </select>
+                                        
+                                        <div class="mt-3">
+                                            <label for="chart-type" class="form-label">图表类型</label>
+                                            <select class="form-select" id="chart-type">
+                                                <option value="line">折线图</option>
+                                                <option value="bar">柱状图</option>
+                                                <option value="heatmap">热力图</option>
+                                                <option value="pie">饼图</option>
+                                                <option value="pca">PCA图</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <label for="person-selector" class="form-label">选择人员 (可选)</label>
+                                            <select class="form-select" id="person-selector" multiple>
+                                                <option value="">显示所有人员</option>
+                                            </select>
+                                            <small class="form-text text-muted">按住Ctrl键可多选，不选择则显示所有人员</small>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <button class="btn btn-primary w-100" onclick="generateChart()">
+                                                <i class="fas fa-chart-line me-2"></i>
+                                                生成图表
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-9">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">图表展示</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="chart-container" class="chart-container">
+                                            <div class="text-center text-muted">
+                                                <i class="fas fa-chart-pie fa-3x mb-3"></i>
+                                                <p>请选择数据并生成图表</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 趋势预测 -->
+                    <div id="predictions-section" class="section" style="display: none;">
+                        <h2 class="mb-4">
+                            <i class="fas fa-crystal-ball me-2"></i>
+                            趋势预测
+                        </h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card prediction-card">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                                        <h5>线性回归预测</h5>
+                                        <p>基于历史数据的线性趋势预测</p>
+                                        <button class="btn btn-light" onclick="generatePrediction('linear')">
+                                            开始预测
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card insight-card">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-brain fa-3x mb-3"></i>
+                                        <h5>AI智能预测</h5>
+                                        <p>使用Qwen3-Coder模型进行智能预测</p>
+                                        <button class="btn btn-light" onclick="generatePrediction('ai')">
+                                            开始预测
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">预测结果</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="prediction-results">
+                                            <div class="text-center text-muted">
+                                                <i class="fas fa-crystal-ball fa-3x mb-3"></i>
+                                                <p>请选择预测方法并开始预测</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 系统设置 -->
+                    <div id="settings-section" class="section" style="display: none;">
+                        <h2 class="mb-4">
+                            <i class="fas fa-cog me-2"></i>
+                            系统设置
+                        </h2>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">模型配置</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <label for="model-temperature" class="form-label">温度参数</label>
+                                            <input type="range" class="form-range" id="model-temperature" min="0" max="1" step="0.1" value="0.7">
+                                            <small class="text-muted">当前值: <span id="temp-value">0.7</span></small>
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="model-max-length" class="form-label">最大长度</label>
+                                            <input type="number" class="form-control" id="model-max-length" value="2048" min="512" max="4096">
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                            <label for="prediction-steps-setting" class="form-label">默认预测步数</label>
+                                            <input type="number" class="form-control" id="prediction-steps-setting" value="10" min="1" max="100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">系统信息</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <strong>系统版本:</strong><br>
+                                                <strong>Python版本:</strong><br>
+                                                <strong>Java版本:</strong><br>
+                                                <strong>内存使用:</strong><br>
+                                                <strong>CPU使用:</strong>
+                                            </div>
+                                            <div class="col-6">
+                                                v1.0.0<br>
+                                                3.8+<br>
+                                                11+<br>
+                                                <span id="memory-usage">45%</span><br>
+                                                <span id="cpu-usage">23%</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-3">
+                                            <button class="btn btn-primary" onclick="refreshSystemInfo()">
+                                                <i class="fas fa-sync-alt me-2"></i>
+                                                刷新信息
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 自定义JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

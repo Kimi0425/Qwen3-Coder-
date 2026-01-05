@@ -1,0 +1,22 @@
+2025-09-30 23:01:44 | INFO     | logging:callHandlers:1706 - 启动Python数据分析服务，端口: 5000
+2025-09-30 23:02:26 | INFO     | logging:callHandlers:1706 - 数据上传成功: data_20250930_230226_5293
+2025-09-30 23:02:43 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250930_230226_5293
+2025-09-30 23:02:43 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-30 23:02:43 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250930_230226_5293
+2025-09-30 23:02:50 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250930_230226_5293
+2025-09-30 23:02:50 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-30 23:02:50 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250930_230226_5293
+2025-09-30 23:02:54 | INFO     | logging:callHandlers:1706 - 收到数据分析请求: data_20250930_230226_5293
+2025-09-30 23:02:54 | WARNING  | logging:callHandlers:1706 - Qwen分析失败，使用基础分析: QwenAnalyzer.analyze() missing 2 required positional arguments: 'data' and 'headers'
+2025-09-30 23:02:54 | INFO     | logging:callHandlers:1706 - 数据分析完成: data_20250930_230226_5293
+2025-09-30 23:03:17 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:03:33 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:03 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:12 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:16 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:24 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:28 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:36 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:41 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:45 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
+2025-09-30 23:04:48 | WARNING  | logging:callHandlers:1706 - Qwen图表建议失败: 'QwenAnalyzer' object has no attribute 'suggest_chart_type'
